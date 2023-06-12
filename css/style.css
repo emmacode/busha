@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-family: "SF Pro Text";
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../font/SF-Pro-Text-Ultralight.otf") format("otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../font/SF-Pro-Text-Light.otf") format("otf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../font/SF-Pro-Text-Medium.otf") format("otf");
+  font-style: italic;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("../font/SF-Pro-Text-Semibold.otf") format("otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+.cactus-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.home {
+  padding: 40px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebeef1;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  .cactus-container {
+    width: 1440px;
+    margin: auto;
+  }
+}

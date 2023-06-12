@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cactus practice</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/right.css" />
+    <link rel="stylesheet" href="./css/payment.css" />
+    <link rel="stylesheet" href="./css/payment-details.css" />
+  </head>
+  <body>
+    <div class="cactus-container">
+      <div class="main">
+        <!-- Header -->
+        <nav class="navbarContainer">
+          <!-- first header -->
+          <div class="navbarFirst">
+            <div class="logoContainer">
+              <img src="./images/logo.svg" alt="" />
+              <p>
+                Cactus Practice
+                <img
+                  src="./images/arrowDown.svg"
+                  class="logo-arrowDown"
+                  alt=""
+                />
+              </p>
+            </div>
+            <!-- search -->
+            <div>
+              <form class="nosubmit">
+                <input class="nosubmit" type="text" placeholder="Search..." />
+              </form>
+            </div>
+            <!-- profile -->
+            <div class="accountSetting">
+              <div class="create">
+                <button>
+                  Create <img src="./images/purplearrow.svg" alt="" />
+                </button>
+              </div>
+              <div class="help">
+                <img src="./images/help.svg" alt="" />
+                <p>Help</p>
+              </div>
+              <div class="notif" current-count="1">
+                <img src="./images/bell.svg" class="bell" alt="" />
+              </div>
+              <div class="setting">
+                <img src="./images/setting.svg" alt="" />
+              </div>
+              <div class="profile">
+                <img src="./images/profile.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- second header -->
+          <div class="navbarSecond">
+            <!-- First part -->
+            <div>
+              <ul class="nav__list" id="nav">
+                <li class="nav__item activeLink">
+                  <a class="nav__link" href="/">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="./payment.html">Payments</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Balances</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Customers</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Products</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Reports</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Connect</a>
+                </li>
+                <li class="nav__item dropdown">
+                  <p>More</p>
+                  <img src="./images/arrowDown.svg" alt="" />
+                  <div class="dropdown__content">
+                    <a href="#">More</a>
+                    <a href="#">More</a>
+                    <a href="#">More</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="testData">
+              <p>Developers</p>
+              <p>
+                Test data
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </p>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Main screen -->
+        <div class="payments">
+          <div>
+            <h1 class="paymentTab-head">Payments</h1>
+            <div class="paymentTab">
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb8"
+                onclick="openTab(event, 'allPayment')"
+                id="defaultOpen"
+              >
+                All payments
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb8"
+                onclick="openTab(event, 'reviews')"
+              >
+                Reviews
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb8"
+                onclick="openTab(event, 'disputes')"
+              >
+                Disputes
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb8"
+                onclick="openTab(event, 'collectedFees')"
+              >
+                Collected fees
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb28"
+                onclick="openTab(event, 'allTransactions')"
+              >
+                All transactions
+              </button>
+
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb8"
+                onclick="openTab(event, 'invoices')"
+              >
+                Invoices
+              </button>
+
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb8"
+                onclick="openTab(event, 'subcriptions')"
+              >
+                Subcriptions
+              </button>
+
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb28"
+                onclick="openTab(event, 'quotes')"
+              >
+                Quotes
+              </button>
+
+              <button
+                class="tablinks paymentTab-16"
+                onclick="openTab(event, 'paymentLinks')"
+              >
+                Payment links
+              </button>
+            </div>
+          </div>
+
+          <div class="tabcontent" id="allPayment">
+            <div class="paymentDetail-container">
+              <!-- pd-amountContainer -->
+              <section>
+                <div class="pd-amountContainer">
+                  <div class="pd-amountInfo">
+                    <div class="pd-amountCard">
+                      <img src="./images/payIcon.svg" alt="" />
+                      <p>PAYMENT</p>
+                    </div>
+                    <div class="pd-amountStatus">
+                      <p class="pd-amount">$120.00</p>
+                      <p class="pd-usd">USD</p>
+                      <p class="pd-success">
+                        Succeeded<img src="./images/successCheck.svg" alt="" />
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="pd-action">
+                    <div class="pd-ch">
+                      <p>ch_DSichI82bTrm9l</p>
+                      <img src="./images/chIcon.svg" alt="" />
+                    </div>
+                    <div class="pd-refund">
+                      <button>
+                        <img src="./images/refundIcon.svg" alt="" /> Refund
+                      </button>
+                      <button>
+                        <img src="./images/ham.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- End pd-amount container -->
+
+              <!-- payment data -->
+              <section>
+                <div class="paymentData">
+                  <!-- date -->
+                  <div class="pd-date">
+                    <p class="pd-mb-2">Date</p>
+                    <h6>August 21, 2018</h6>
+                  </div>
+                  <!-- customer -->
+                  <div class="pd-customer">
+                    <p class="pd-mb-2">Customer</p>
+                    <h6>richard.phegley@hotmail.com</h6>
+                  </div>
+                  <!-- payment method -->
+                  <div class="pd-method">
+                    <p class="pd-mb-2">Payment method</p>
+                    <div class="pd-method-visa">
+                      <img src="./images/visa.svg" alt="" />
+                      <p>•••• 2280</p>
+                    </div>
+                  </div>
+                  <!-- risk -->
+                  <div class="pd-risk">
+                    <p class="pd-mb-2">Risk evaluation</p>
+                    <h6>Normal</h6>
+                  </div>
+                </div>
+              </section>
+              <!-- End payment data -->
+
+              <!-- Timeline -->
+              <section>
+                <div class="timeline">
+                  <div class="timeline-head">
+                    <h1>Timeline</h1>
+                    <button>
+                      <img src="./images/cross.svg" alt="" />
+                      <p>Add note</p>
+                    </button>
+                  </div>
+
+                  <div class="timeline-py12">
+                    <div class="timeline-row">
+                      <div class="timeline-mr16">
+                        <img
+                          class="timeline-mt5"
+                          src="./images/eye.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="timeline-textsm">
+                          Payment approved and review closed
+                        </p>
+                        <p class="timeline-textxs">August 22, 2018, 6:14 PM</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-py12">
+                    <div class="timeline-row">
+                      <div class="timeline-mr16">
+                        <img
+                          class="timeline-mt5"
+                          src="./images/eye.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="timeline-textsm">
+                          Placed in review by a
+                          <span class="timeline-span">rule</span>
+                        </p>
+                        <p class="timeline-textxs">August 22, 2018, 6:14 PM</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-py12">
+                    <div class="timeline-row">
+                      <div class="timeline-mr16">
+                        <img
+                          class="timeline-mt5"
+                          src="./images/greenCheck.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="timeline-textsm">Payment succeeded</p>
+                        <p class="timeline-textxs">August 22, 2018, 6:14 PM</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-py12">
+                    <div class="timeline-row">
+                      <div class="timeline-mr16">
+                        <img
+                          class="timeline-mt5"
+                          src="./images/grayBadge.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div>
+                        <p class="timeline-textsm">
+                          Stripe risk evaluation normal
+                        </p>
+                        <p class="timeline-textxs">August 22, 2018, 6:14 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- End timeline -->
+
+              <!-- payment details -->
+              <section class="payd-mt39">
+                <div class="payd-head">
+                  <h1>Payment details</h1>
+                </div>
+
+                <div class="payd-mt17 payd-row">
+                  <div class="payd-col payd-tit payd-mr128">
+                    <p class="payd-mb9">Amount</p>
+                    <p class="payd-mb9">Fee</p>
+                    <p class="payd-mb9">Net</p>
+                    <p class="payd-mb9">Status</p>
+                    <p>Description</p>
+                  </div>
+                  <div class="payd-col payd-ans">
+                    <p class="payd-mb9">$120.00</p>
+                    <p class="payd-mb9 payd-row payd-center">
+                      $0.59
+                      <img src="./images/iIcon.svg" class="payd-ml4" alt="" />
+                    </p>
+                    <p class="payd-mb9">$119.41</p>
+                    <p class="payd-mb9">Succeeded</p>
+                    <p class="payd-mb9 payd-row payd-center">
+                      Richard Phegley richard.phegley@hotmail.com - Stripe Shop
+                      T-Shirt Order
+                      <span class="payd-row payd-center"
+                        ><img src="./images/pen.svg" alt="" />Edit</span
+                      >
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <!-- End payment details -->
+
+              <!-- payment method -->
+              <section class="paymed-mt40 paymed-mb3">
+                <div class="paymed-head">
+                  <h1>Payment methods</h1>
+                </div>
+
+                <div class="paymed-btw paymed paymed-mt17">
+                  <p class="paymed-sec">ID</p>
+                  <p class="paymed-pri">card_DSic4BsiFg8J6p</p>
+
+                  <p class="paymed-sec">Owner</p>
+                  <p class="paymed-pri">card_DSic4BsiFg8J6p</p>
+                </div>
+              </section>
+              <!-- End payment method -->
+            </div>
+          </div>
+
+          <div id="reviews" class="tabcontent">
+            <h3>Reviews</h3>
+          </div>
+
+          <div id="disputes" class="tabcontent">
+            <h3>Disputes</h3>
+          </div>
+
+          <div id="collectedFees" class="tabcontent">
+            <h3>Collected fees</h3>
+          </div>
+
+          <div id="allTransactions" class="tabcontent">
+            <h3>All transactions</h3>
+          </div>
+
+          <div id="invoices" class="tabcontent">
+            <h3>Invoices</h3>
+          </div>
+
+          <div id="subcriptions" class="tabcontent">
+            <h3>Subcriptions</h3>
+          </div>
+
+          <div id="quotes" class="tabcontent">
+            <h3>Quotes</h3>
+          </div>
+
+          <div id="paymentLinks" class="tabcontent">
+            <h3>Payment links</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side -->
+      <div class="rightSide">
+        <div class="rightSide-inner">
+          <img src="./images/sideicon1.svg" alt="" />
+          <hr class="right-hr" />
+          <img src="./images/sideicon2.svg" alt="" />
+          <img src="./images/sideicon3.svg" alt="" />
+          <img src="./images/sideicon4.svg" alt="" />
+          <img src="./images/sideicon5.svg" alt="" />
+          <img src="./images/sideicon6.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

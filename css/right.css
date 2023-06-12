@@ -1,0 +1,28 @@
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  border-left: 1px solid #ebeef1;
+  padding: 0 8px;
+}
+
+.rightSide-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSide img {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.rightSide img:last-child {
+  margin-bottom: 0;
+}
+
+.right-hr {
+  width: 24px;
+  margin-bottom: 20px;
+  background: #ebeef1;
+}

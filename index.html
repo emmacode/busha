@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cactus practice</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/right.css" />
+  </head>
+  <body>
+    <div class="cactus-container">
+      <div class="main">
+        <!-- Header -->
+        <nav class="navbarContainer">
+          <!-- first header -->
+          <div class="navbarFirst">
+            <div class="logoContainer">
+              <img src="./images/logo.svg" alt="" />
+              <p>
+                Cactus Practice
+                <img
+                  src="./images/arrowDown.svg"
+                  class="logo-arrowDown"
+                  alt=""
+                />
+              </p>
+            </div>
+            <!-- search -->
+            <div>
+              <form class="nosubmit">
+                <input class="nosubmit" type="text" placeholder="Search..." />
+              </form>
+            </div>
+            <!-- profile -->
+            <div class="accountSetting">
+              <div class="create">
+                <button>
+                  Create <img src="./images/purplearrow.svg" alt="" />
+                </button>
+              </div>
+              <div class="help">
+                <img src="./images/help.svg" alt="" />
+                <p>Help</p>
+              </div>
+              <div class="notif" current-count="1">
+                <img src="./images/bell.svg" class="bell" alt="" />
+              </div>
+              <div class="setting">
+                <img src="./images/setting.svg" alt="" />
+              </div>
+              <div class="profile">
+                <img src="./images/profile.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- second header -->
+          <div class="navbarSecond">
+            <!-- First part -->
+            <div>
+              <ul class="nav__list" id="nav">
+                <li class="nav__item activeLink">
+                  <a class="nav__link" href="/">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="./payment.html">Payments</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Balances</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Customers</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Products</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Reports</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Connect</a>
+                </li>
+                <li class="nav__item dropdown">
+                  <p>More</p>
+                  <img src="./images/arrowDown.svg" alt="" />
+                  <div class="dropdown__content">
+                    <a href="#">More</a>
+                    <a href="#">More</a>
+                    <a href="#">More</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="testData">
+              <p>Developers</p>
+              <p>
+                Test data
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </p>
+            </div>
+          </div>
+        </nav>
+
+        <section class="home">
+          <h1>Home</h1>
+        </section>
+      </div>
+
+      <!-- Right side -->
+      <div class="rightSide">
+        <div class="rightSide-inner">
+          <img src="./images/sideicon1.svg" alt="" />
+          <hr class="right-hr" />
+          <img src="./images/sideicon2.svg" alt="" />
+          <img src="./images/sideicon3.svg" alt="" />
+          <img src="./images/sideicon4.svg" alt="" />
+          <img src="./images/sideicon5.svg" alt="" />
+          <img src="./images/sideicon6.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

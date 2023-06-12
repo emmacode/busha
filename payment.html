@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cactus practice</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/right.css" />
+    <link rel="stylesheet" href="./css/payment.css" />
+  </head>
+  <body>
+    <div class="cactus-container">
+      <div class="main">
+        <!-- Header -->
+        <nav class="navbarContainer">
+          <!-- first header -->
+          <div class="navbarFirst">
+            <div class="logoContainer">
+              <img src="./images/logo.svg" alt="" />
+              <p>
+                Cactus Practice
+                <img
+                  src="./images/arrowDown.svg"
+                  class="logo-arrowDown"
+                  alt=""
+                />
+              </p>
+            </div>
+            <!-- search -->
+            <div>
+              <form class="nosubmit">
+                <input class="nosubmit" type="text" placeholder="Search..." />
+              </form>
+            </div>
+            <!-- profile -->
+            <div class="accountSetting">
+              <div class="create">
+                <button>
+                  Create <img src="./images/purplearrow.svg" alt="" />
+                </button>
+              </div>
+              <div class="help">
+                <img src="./images/help.svg" alt="" />
+                <p>Help</p>
+              </div>
+              <div class="notif" current-count="1">
+                <img src="./images/bell.svg" class="bell" alt="" />
+              </div>
+              <div class="setting">
+                <img src="./images/setting.svg" alt="" />
+              </div>
+              <div class="profile">
+                <img src="./images/profile.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- second header -->
+          <div class="navbarSecond">
+            <!-- First part -->
+            <div>
+              <ul class="nav__list" id="nav">
+                <li class="nav__item">
+                  <a class="nav__link" href="/">Home</a>
+                </li>
+                <li class="nav__item activeLink">
+                  <a class="nav__link" href="./payment.html">Payments</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Balances</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Customers</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Products</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Reports</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#">Connect</a>
+                </li>
+                <li class="nav__item dropdown">
+                  <p>More</p>
+                  <img src="./images/arrowDown.svg" alt="" />
+                  <div class="dropdown__content">
+                    <a href="#">More</a>
+                    <a href="#">More</a>
+                    <a href="#">More</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="testData">
+              <p>Developers</p>
+              <p>
+                Test data
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </p>
+            </div>
+          </div>
+        </nav>
+        <!-- Main screen -->
+        <div class="payments">
+          <div>
+            <h1 class="paymentTab-head">Payments</h1>
+            <div class="paymentTab">
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb8"
+                onclick="openTab(event, 'allPayment')"
+                id="defaultOpen"
+              >
+                All payments
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb8"
+                onclick="openTab(event, 'reviews')"
+              >
+                Reviews
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb8"
+                onclick="openTab(event, 'disputes')"
+              >
+                Disputes
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb8"
+                onclick="openTab(event, 'collectedFees')"
+              >
+                Collected fees
+              </button>
+
+              <button
+                class="tablinks paymentTab-24 paymentTab-mb28"
+                onclick="openTab(event, 'allTransactions')"
+              >
+                All transactions
+              </button>
+
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb8"
+                onclick="openTab(event, 'invoices')"
+              >
+                Invoices
+              </button>
+
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb8"
+                onclick="openTab(event, 'subcriptions')"
+              >
+                Subcriptions
+              </button>
+
+              <button
+                class="tablinks paymentTab-16 paymentTab-mb28"
+                onclick="openTab(event, 'quotes')"
+              >
+                Quotes
+              </button>
+
+              <button
+                class="tablinks paymentTab-16"
+                onclick="openTab(event, 'paymentLinks')"
+              >
+                Payment links
+              </button>
+            </div>
+          </div>
+
+          <div class="tabcontent" id="allPayment">
+            <div class="paymentList">
+              <!-- Payment List Header -->
+              <div class="paymentListHeader">
+                <h1>Payments</h1>
+                <div class="paymentTab-action">
+                  <button class="payment-filter">
+                    <img src="./images/filterIcon.svg" alt="" /> Filter
+                  </button>
+                  <button class="payment-export">
+                    <img src="./images/exportArrow.svg" alt="" />Export
+                  </button>
+                  <button class="createPayment">
+                    <img src="./images/createPaymentIcon.svg" alt="" />Create
+                    payment
+                  </button>
+                </div>
+              </div>
+              <!-- End Payment List Header -->
+              <!-- Payment Table List -->
+              <div class="payment__tableList-tab">
+                <button
+                  class="listtabs"
+                  onclick="openListTab(event, 'all')"
+                  id="defaultListOpen"
+                >
+                  All
+                </button>
+                <button
+                  class="listtabs"
+                  onclick="openListTab(event, 'succeeded')"
+                >
+                  Succeeded
+                </button>
+                <button
+                  class="listtabs"
+                  onclick="openListTab(event, 'refunded')"
+                >
+                  Refunded
+                </button>
+                <button
+                  class="listtabs"
+                  onclick="openListTab(event, 'uncaptured')"
+                >
+                  Uncaptured
+                </button>
+              </div>
+
+              <div id="all" class="listcontent">
+                <div class="table-container">
+                  <!-- table row -->
+                  <div>
+                    <table>
+                      <tr>
+                        <th>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </th>
+                        <th>AMOUNT</th>
+                        <th>DESCRIPTION</th>
+                        <th>CUSTOMER</th>
+                        <th>DATE</th>
+                      </tr>
+                      <!-- first row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $4,242.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 9CER2A3</td>
+                        <td class="table-content">janedoe@gmail.com</td>
+                        <td class="table-content">May 31, 2020, 11:58 AM</td>
+                        <td class="table-more">
+                          <a href="./payment-details.html">
+                            <img src="./images/ham.svg" alt=""
+                          /></a>
+                        </td>
+                      </tr>
+                      <!-- second row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $106.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 4DLFJD3</td>
+                        <td class="table-content">sammy108@email.com</td>
+                        <td class="table-content">May 31, 2020, 1:38 AM</td>
+                        <td class="table-more">
+                          <a href="#"><img src="./images/ham.svg" alt="" /></a>
+                        </td>
+                      </tr>
+                      <!-- third row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $7.77
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 84HD943</td>
+                        <td class="table-content">gogo4564@gmail.com</td>
+                        <td class="table-content">May 28, 2020, 9:45 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- fourth row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $5.55
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 67JGHF34</td>
+                        <td class="table-content">bobbysmi@gmail.com</td>
+                        <td class="table-content">May 27, 2020, 6:44 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- fifth row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount-warn">
+                          $20.50
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-warn">
+                            Yellow <img src="./images/warnIcon.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 43GN452</td>
+                        <td class="table-content">jacksonjames@gmail.com</td>
+                        <td class="table-content">May 27, 2020, 2:54 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- sixth row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $450.50
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 75930GH</td>
+                        <td class="table-content">bethgrand@gmail.com</td>
+                        <td class="table-content">May 25, 2020, 12:52 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- seventh row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $5.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 2I84JD8</td>
+                        <td class="table-content">hayleys@gmail.com</td>
+                        <td class="table-content">May 24, 2020, 10:23 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- eigth row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $52.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 4HFHIDL</td>
+                        <td class="table-content">pheobe@gmail.com</td>
+                        <td class="table-content">May 24, 2020, 9:14 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- nineth row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $54.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 56YT763</td>
+                        <td class="table-content">tucker45@gmail.com</td>
+                        <td class="table-content">May 24, 2020, 5:23 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- tenth row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $68.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 87RFY56</td>
+                        <td class="table-content">chapjones@gmail.com</td>
+                        <td class="table-content">May 22, 2020, 7:44 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- 11th row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $432.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 9CER2A3</td>
+                        <td class="table-content">timmytim@gmail.com</td>
+                        <td class="table-content">May 20, 2020, 6:23 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- 12 row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $1,244.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 456G2AZ</td>
+                        <td class="table-content">busterbl@gmail.com</td>
+                        <td class="table-content">May 18, 2020, 11:27 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- 13th row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $353.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 5HF743L</td>
+                        <td class="table-content">lionel10@gmail.com</td>
+                        <td class="table-content">May 18, 2020, 9:34 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- 14th row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $42.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 73RFH48</td>
+                        <td class="table-content">kevinblue@gmail.com</td>
+                        <td class="table-content">May 18, 2020, 7:33 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                      <!-- 15th row -->
+                      <tr>
+                        <td>
+                          <label class="checkbox__container">
+                            <input type="checkbox" />
+                            <span class="checkbox__checkmark"></span>
+                          </label>
+                        </td>
+                        <td class="table-amount">
+                          $242.00
+                          <p class="table-currency">USD</p>
+                          <p class="table-badge-success">
+                            Succeeded
+                            <img src="./images/greenSuccess.svg" alt="" />
+                          </p>
+                        </td>
+                        <td class="table-content">Invoice 45JU783</td>
+                        <td class="table-content">jilljameston@gmail.com</td>
+                        <td class="table-content">May 17, 2020, 11:49 AM</td>
+                        <td class="table-more">
+                          <img src="./images/ham.svg" alt="" />
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- paginated button -->
+                  <div class="paginated-section">
+                    <div><p>919 results</p></div>
+                    <div>
+                      <button class="paginatedBtn">Previous</button>
+                      <button class="paginatedBtn">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="succeeded" class="listcontent">succeeded</div>
+              <div id="refunded" class="listcontent">refunded</div>
+              <div id="uncaptured" class="listcontent">uncaptured</div>
+              <!-- End Payment Table List -->
+            </div>
+          </div>
+
+          <div id="reviews" class="tabcontent">
+            <h3>Reviews</h3>
+          </div>
+
+          <div id="disputes" class="tabcontent">
+            <h3>Disputes</h3>
+          </div>
+
+          <div id="collectedFees" class="tabcontent">
+            <h3>Collected fees</h3>
+          </div>
+
+          <div id="allTransactions" class="tabcontent">
+            <h3>All transactions</h3>
+          </div>
+
+          <div id="invoices" class="tabcontent">
+            <h3>Invoices</h3>
+          </div>
+
+          <div id="subcriptions" class="tabcontent">
+            <h3>Subcriptions</h3>
+          </div>
+
+          <div id="quotes" class="tabcontent">
+            <h3>Quotes</h3>
+          </div>
+
+          <div id="paymentLinks" class="tabcontent">
+            <h3>Payment links</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side -->
+      <div class="rightSide">
+        <div class="rightSide-inner">
+          <img src="./images/sideicon1.svg" alt="" />
+          <hr class="right-hr" />
+          <img src="./images/sideicon2.svg" alt="" />
+          <img src="./images/sideicon3.svg" alt="" />
+          <img src="./images/sideicon4.svg" alt="" />
+          <img src="./images/sideicon5.svg" alt="" />
+          <img src="./images/sideicon6.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

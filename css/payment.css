@@ -1,0 +1,393 @@
+.payments {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 40px 81px 40px;
+}
+
+.paymentTab-head {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #30313d;
+}
+
+.paymentTab {
+  margin-top: 16px;
+  width: 124px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #ebeef1;
+}
+
+.paymentTab button {
+  display: block;
+  color: #414552;
+  /* padding: 22px 16px; */
+  /* width: 100%; */
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  background: transparent;
+}
+
+.paymentTab-16 {
+  padding-left: 16px;
+}
+
+.paymentTab-24 {
+  padding-left: 24px;
+}
+
+.paymentTab-mb8 {
+  margin-bottom: 8px;
+}
+
+.paymentTab-mb28 {
+  margin-bottom: 28px;
+}
+
+.paymentTab button.active {
+  color: #625afa;
+  border-left: 1px solid #625afa;
+}
+
+.tabcontent {
+  margin-left: 72px;
+  width: 100%;
+}
+
+.paymentList {
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentListHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentTab-action {
+  display: flex;
+  flex-direction: row;
+}
+
+.payment-filter {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4257;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e0e6eb;
+  border-radius: 4px;
+  margin-right: 8px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 2px 5px rgba(60, 66, 87, 0.08);
+  cursor: pointer;
+}
+
+.payment-filter img {
+  margin-right: 9px;
+}
+
+.payment-export {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4257;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e0e6eb;
+  border-radius: 4px;
+  margin-right: 8px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 2px 5px rgba(60, 66, 87, 0.08);
+  cursor: pointer;
+}
+
+.payment-export img {
+  margin-right: 9px;
+}
+
+.createPayment {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 4px 8px;
+  color: #ffffff;
+  background: #625afa;
+  border: 1px solid #625afa;
+  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.08), inset 0px -1px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createPayment img {
+  margin-right: 8px;
+}
+
+.payment__tableList-tab {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ebeef1;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.payment__tableList-tab button {
+  display: block;
+  color: #697386;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background: transparent;
+  padding-bottom: 8px;
+  margin-right: 28px;
+}
+
+.payment__tableList-tab button:last-child {
+  margin-right: 0;
+}
+
+.payment__tableList-tab button.activeList {
+  color: #625afa;
+  border-bottom: 1px solid #625afa;
+}
+
+.listcontent {
+  display: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* checkmark style */
+
+.checkbox__container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.08),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: #fff;
+  border: 1px solid #c0c8d2;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.checkbox__container input:checked ~ .checkbox__checkmark {
+  background-color: #625afa;
+}
+
+.checkbox__container input:checked ~ .checkbox__checkmark:after {
+  display: block;
+}
+
+.checkbox__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox__container .checkbox__checkmark:after {
+  left: 4px;
+  top: 0;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* end checkmark style */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ebeef1;
+}
+
+th {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 0.340402px;
+  text-transform: uppercase;
+  color: #1a1f36;
+}
+
+th:first-child {
+  text-align: inherit;
+}
+
+th,
+td {
+  padding: 7px 0 9px 0;
+  /* text-align: center; */
+}
+
+.table-amount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #30313d;
+  justify-content: flex-end;
+}
+
+.table-amount-warn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #30313d;
+  justify-content: flex-end;
+  margin-right: 28px;
+}
+
+.table-currency {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6a7383;
+  margin-left: 16px;
+}
+
+.table-badge-success {
+  padding: 1px 6px;
+  background: #d7f7c2;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #006908;
+  margin-left: 16px;
+}
+
+.table-badge-warn {
+  display: flex;
+  align-items: center;
+  padding: 1px 6px;
+  background: #f6e6b9;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #a82c00;
+  margin-left: 16px;
+}
+
+.table-badge-warn img {
+  margin-left: 4px;
+}
+
+.table-content {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6a7383;
+  text-align: center;
+}
+
+.table-more {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.paginated-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.paginated-section p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6a7383;
+}
+
+.paginatedBtn {
+  padding: 4px 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #687385;
+  border: 1px solid rgba(60, 66, 87, 0.12);
+  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.paginatedBtn:first {
+  margin-right: 8px;
+}

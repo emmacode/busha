@@ -1,0 +1,407 @@
+.paymentDetail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-amountContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  padding-left: 12px;
+  border-bottom: 1px solid #ebeef1;
+}
+
+.pd-amountInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-amountCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.pd-amountCard p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #697386;
+}
+
+.pd-amountCard img {
+  margin-right: 7px;
+}
+
+.pd-amountStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pd-amount {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #30313d;
+  margin-right: 4px;
+}
+
+.pd-usd {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #697386;
+  margin-right: 4px;
+}
+
+.pd-success {
+  background: #cff5f6;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #0055bc;
+  display: flex;
+  align-items: center;
+}
+
+.pd-success img {
+  margin-left: 4px;
+}
+
+.pd-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-ch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pd-ch p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #697386;
+}
+
+.pd-ch img {
+  margin-left: 9px;
+}
+
+.pd-refund {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.pd-refund button:first-child {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4257;
+  padding: 8px;
+  margin-right: 8px;
+}
+
+.pd-refund button:first-child img {
+  margin-right: 8px;
+}
+
+.pd-refund button {
+  background: #fff;
+  border: 1px solid #e0e6eb;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 2px 5px rgba(60, 66, 87, 0.08);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pd-refund button:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 40px;
+}
+
+.paymentData {
+  display: flex;
+  flex-direction: row;
+  margin-top: 11px;
+}
+
+.paymentData p {
+  color: #697386;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.paymentData h6 {
+  color: #687385;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.pd-mb-2 {
+  margin-bottom: 2px;
+}
+
+.pd-date {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+  border-right: 1px solid #ebeef1;
+}
+
+.pd-customer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  border-right: 1px solid #ebeef1;
+}
+
+.pd-method {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  border-right: 1px solid #ebeef1;
+}
+
+.pd-method-visa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pd-method img {
+  margin-right: 8px;
+}
+
+.pd-risk {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin-top: 39px;
+}
+
+.timeline-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ebeef1;
+}
+
+.timeline-head h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1a1f36;
+}
+
+.timeline-head button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 4px 8px;
+  background: #ffffff;
+  border: 1px solid rgba(60, 66, 87, 0.12);
+  box-shadow: 0px 2px 5px rgba(60, 66, 87, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timeline-head button > img {
+  margin-right: 8px;
+}
+
+.timeline-head button > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4257;
+}
+
+.timeline-py12 {
+  padding: 12px 0;
+  border-bottom: 1px solid #ebeef1;
+}
+
+.timeline-mr16 {
+  margin-right: 16px;
+}
+
+.timeline-mt5 {
+  margin-top: 5px;
+}
+
+.timeline-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline-textsm {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #687385;
+}
+
+.timeline-textxs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #a3acba;
+}
+
+.timeline-span {
+  color: #625afa;
+}
+
+.payd-mt39 {
+  margin-top: 39px;
+}
+
+.payd-head {
+  border-bottom: 1px solid #ebeef1;
+  padding-bottom: 11px;
+}
+
+.payd-head h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1a1f36;
+}
+
+.payd-mt17 {
+  margin-top: 17px;
+}
+
+.payd-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.payd-center {
+  align-items: center;
+}
+
+.payd-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.payd-mr128 {
+  margin-right: 128px;
+}
+
+.payd-mb9 {
+  margin-bottom: 9px;
+}
+
+.payd-ml4 {
+  margin-left: 4px;
+}
+
+.payd-tit p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #697386;
+}
+
+.payd-ans p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #687385;
+}
+
+.payd-ans span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #635bff;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.payd-ans span > img {
+  margin-right: 8px;
+}
+
+.paymed-btw {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymed-mt40 {
+  margin-top: 40px;
+}
+
+.paymed-mt17 {
+  margin-top: 17px;
+}
+
+.paymed-mb3 {
+  margin-bottom: 3px;
+}
+
+.paymed-head {
+  padding-bottom: 11px;
+  border-bottom: 1px solid #ebeef1;
+}
+
+.paymed-head h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #1a1f36;
+}
+
+.paymed p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.paymed-sec {
+  color: #697386;
+}
+
+.paymed-pri {
+  color: #687385;
+}
